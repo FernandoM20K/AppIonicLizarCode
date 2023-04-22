@@ -1,0 +1,7 @@
+{
+  "name": "AppPrevencionDesastres",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
