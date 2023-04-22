@@ -1,8 +1,18 @@
 <div class="container">
   <form action="">
-    <ion-datetime></ion-datetime>
 
     <!-- CM: Input del Nombre del Producto -->
-    <ion-input class="m10" label="Producto" label-placement="floating" fill="outline" placeholder="Ingrese el Nombre del Producto"></ion-input>
+    <ion-input label="Producto" label-placement="floating" fill="outline" placeholder="Ingrese el Nombre del Producto"></ion-input>
+
+    
+
+    <!-- CM: Campo de Fecha de Vencimiento -->
+    <ion-datetime-button expand="block" datetime="datetime"></ion-datetime-button>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+
   </form>
 </div>

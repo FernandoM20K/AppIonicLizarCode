@@ -2,3 +2,70 @@
     padding: 10px 20px;
     overflow-y: auto;
 }
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    color: black;
+
+    img {
+        height: 100%;
+        width: 40%;
+        border-radius: inherit;
+    }
+}
+
+.name {
+    color: black;
+}
+
+h2, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2, h3 {
+    width: 60%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+h3 {
+    font-size: 16px;
+    color: #4d4d4d;
+}
+
+.info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.list-centros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

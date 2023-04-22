@@ -4,5 +4,6 @@ export interface IMenuInterface {
     id: number;
     name: string;
     link: string;
-    svg: ISvgInterface
+    svg?: ISvgInterface
+    icon: string;
 } 

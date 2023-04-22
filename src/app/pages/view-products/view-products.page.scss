@@ -1,0 +1,35 @@
+.container {
+    padding: 10px 20px;
+    overflow-y: auto;
+}
+
+ion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: none;
+}
+
+h1,h2,h3,h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-producto {
+    display: flex;
+    border: 1px solid rgb(54, 196, 184);
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    font-size: 13px;
+    color: rgb(179, 216, 228);
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "apphackaton-384519": {
+      "hosting": {
+        "app": [
+          "apphackaton-384519"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "apphackaton-384519"
+  }
+}

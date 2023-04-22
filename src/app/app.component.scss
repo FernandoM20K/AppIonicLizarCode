@@ -1,13 +1,30 @@
 ion-menu::part(backdrop) {
-  background-color: rgba(255, 0, 255, 0.5);
+  background-color: rgba(17, 115, 139, 0.5);
 }
 
 ion-menu::part(container) {
   border-radius: 0 20px 20px 0;
 
-  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+  box-shadow: 4px 0px 16px rgba(2, 57, 121, 0.18);
 }
 
 .overflow {
   overflow-y: auto;
+}
+
+.btn-manu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  // padding: 0;
+  // margin: 0;
 }
