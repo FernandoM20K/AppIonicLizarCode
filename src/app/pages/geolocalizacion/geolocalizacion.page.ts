@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @Component({
   selector: 'app-geolocalizacion',
@@ -13,7 +14,7 @@ export class GeolocalizacionPage implements OnInit {
     latitude: 0,
   }
 
-  constructor() { }
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit() {
     this.view();

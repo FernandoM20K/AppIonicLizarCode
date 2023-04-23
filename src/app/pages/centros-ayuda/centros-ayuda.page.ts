@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICentroAyudaInterface } from 'src/app/core/models/ICentroAyuda.interface';
+import { CentrosAyudaService } from 'src/app/shared/services/centros-ayuda.service';
 
 @Component({
   selector: 'app-centros-ayuda',
@@ -7,6 +8,8 @@ import { ICentroAyudaInterface } from 'src/app/core/models/ICentroAyuda.interfac
   styleUrls: ['./centros-ayuda.page.scss'],
 })
 export class CentrosAyudaPage implements OnInit {
+
+  centrosAyuda: any[] = [];
 
   centroAyuda: ICentroAyudaInterface[] = [
     {
@@ -139,9 +142,22 @@ export class CentrosAyudaPage implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private centrosAyudaService:CentrosAyudaService) { }
 
   ngOnInit() {
+    this.centrosAyudaService.getCentrosAyuda().subscribe(
+      {
+        next: (data) => {
+          this.centrosAyuda = data.docs.map(doc => doc.data());
+          console.log(this.centrosAyuda)
+          console.log('Funcion Realizada')
+        },
+        error: (error) => {
+          console.log(error)
+          console.log('Error');
+        }
+      }
+    );
   }
 
 }

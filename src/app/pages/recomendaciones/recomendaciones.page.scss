@@ -1,0 +1,23 @@
+.container {
+    padding: 10px 20px;
+    overflow-y: auto;
+}
+
+.b {
+    &green {
+        border: 2px solid green;
+    }
+
+    &red {
+        border: 2px solid red;
+    }
+
+    &blue {
+        border: 2px solid blue;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: greenyellow;
+}

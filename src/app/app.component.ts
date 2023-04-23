@@ -31,22 +31,22 @@ export class AppComponent {
     },
     {
       id: 4,
+      name: 'Centros de Ayuda',
+      icon: 'help-circle-outline',
+      link: "/centros-ayuda"
+    },
+    {
+      id: 5,
+      name: 'Login',
+      icon: 'log-in-outline',
+      link: "/login"
+    },
+    {
+      id: 6,
       name: 'Configuración',
       icon: 'settings-outline',
       link: "/configuracion"
     },
-    {
-      id: 5,
-      name: 'Hospitales',
-      icon: 'medkit-outline',
-      link: "/hospitales"
-    },
-    {
-      id: 6,
-      name: 'Centros de Ayuda',
-      icon: 'help-circle-outline',
-      link: "/centros-ayuda"
-    }
   ];
   
   constructor() {}

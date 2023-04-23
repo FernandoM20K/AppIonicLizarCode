@@ -1,9 +1,9 @@
 <div class="container">
   <ion-list>
-    <button class="btn-producto" *ngFor="let p of productos">
+    <button class="btn-producto" *ngFor="let p of articulosMochila">
       <div class="center">
         <h2>{{ p.nombre }}</h2>
-        <h3>Caduca el: {{ p.fechaVencimiento | date }}</h3>
+        <h3>Caduca el: {{ p.fechaCaducidad | date }}</h3>
       </div>
       <ion-icon name="caret-forward-outline" size="medium"></ion-icon>
     </button>
@@ -25,21 +25,15 @@
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
-        <form>
+        <form [formGroup]="productoAgregado" (submit)="addProducto()">
           <!-- CM: Input Nombre del Producto -->
-          <ion-input class="ion-margin-top" label="Nombre del Producto" label-placement="stacked" fill="outline" placeholder="Ingrese el Nombre del Producto"></ion-input>
+          <ion-input formControlName="nombre" class="ion-margin-top" label="Nombre del Producto" label-placement="stacked" fill="outline" placeholder="Ingrese el Nombre del Producto"></ion-input>
 
           <!-- CM: Input Cantidad del Producto -->
-          <ion-input class="ion-margin-top" label="Cantidad" type="number" labelPlacement="stacked" fill="outline" placeholder="10"></ion-input>
+          <ion-input formControlName="cantidad" class="ion-margin-top" label="Cantidad" type="number" labelPlacement="stacked" fill="outline" placeholder="10"></ion-input>
 
           <!-- CM: Campo fecha de Vencimiento del Producto -->
-          <ion-datetime-button class="ion-margin-top" expand="block" datetime="datetime"></ion-datetime-button>
-
-          <ion-modal [keepContentsMounted]="true">
-            <ng-template>
-              <ion-datetime id="datetime"></ion-datetime>
-            </ng-template>
-          </ion-modal>
+          <input formControlName="fechaCaducidad" type="date" class="input-date">
 
           <ion-button class="ion-margin-top" type="submit" expand="block" fill="outline">Agregar Producto</ion-button>
         </form>
