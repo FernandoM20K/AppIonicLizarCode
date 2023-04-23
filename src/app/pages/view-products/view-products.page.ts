@@ -72,7 +72,7 @@ export class ViewProductsPage implements OnInit {
     }
   ]
 
-  articulosMochila: any[] = [];
+  articulosMochila: any[] | undefined;
 
   isModalOpen = false;
 
@@ -83,9 +83,19 @@ export class ViewProductsPage implements OnInit {
   constructor(private mochilaEmergencia:MochilaEmergenciaService) { }
 
   ngOnInit() {
-    this.mochilaEmergencia.getUsuarios().subscribe(data => {
-      this.articulosMochila = data.docs.map(doc => doc.data());
-    });
+    this.mochilaEmergencia.getUsuarios().subscribe(
+      {
+        next: (data) => {
+          this.articulosMochila = data.docs.map(doc => doc.data());
+          console.log(this.articulosMochila)
+          console.log('Funcion Realizada')
+        },
+        error: (error) => {
+          console.log(error)
+          console.log('Error');
+        }
+      }
+    );
   }
 
 }
